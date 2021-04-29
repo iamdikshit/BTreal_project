@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <!-- Font Awesome -->
+        <link rel="stylesheet" href="{% static 'css/all.css' %}">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <!-- Custom -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!-- light box-->
+        <link rel = "stylesheet" href = "{% static 'css/lightbox.min.css' %}">
+        <title>BTreal {% block title %}{% endblock title %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <!--Topbar-->
+        {% include 'partials/_topbar.html' %}
+
+        <!--Navbar-->
+        {% include 'partials/_navbar.html' %}
+  
+        {% block content %}
+
+        {% endblock %}
+
+        <!--footer-->
+        {% include 'partials/_footer.html' %}
+
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        <script src="{% static 'js/lightbox.min.js' %}"></script>
+    </body>
+</html>
